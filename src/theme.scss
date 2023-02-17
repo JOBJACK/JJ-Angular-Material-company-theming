@@ -1,0 +1,28 @@
+@use '@angular/material' as mat;
+@import './palette.scss';
+@include mat.core();
+
+$primary-color: #9c27b0;
+$accent-color: #161b16;
+$warn-color: #b05227;
+
+$primary-palette: createPalette($primary-color);
+$accent-palette: createPalette($accent-color);
+$warn-palette: createPalette($warn-color);
+
+$my-primary: mat.define-palette($primary-palette, 500);
+$my-accent: mat.define-palette($accent-palette, 500);
+$my-warn: mat.define-palette($warn-palette, 500);
+
+$jj-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+    density: 0,
+  )
+);
+
+@include mat.all-component-themes($jj-theme);
