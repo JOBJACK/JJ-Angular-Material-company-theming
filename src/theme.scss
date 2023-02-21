@@ -2,7 +2,7 @@
 @import './palette.scss';
 @include mat.core();
 
-$primary-color: #27b03e;
+$primary-color: #0dbd2a;
 $accent-color: #161b16;
 $warn-color: #c4653a;
 
@@ -12,7 +12,7 @@ $warn-palette: createPalette($warn-color);
 
 $my-primary: mat.define-palette($primary-palette, 500);
 $my-accent: mat.define-palette($accent-palette, 500);
-$my-warn: mat.define-palette($warn-palette, 500);
+$my-warn: mat.define-palette($warn-palette);
 
 $jj-theme: mat.define-light-theme(
   (
